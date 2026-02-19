@@ -1,0 +1,26 @@
+/* HEADER */
+ #logo {
+  font-weight: 550 ;
+  font-size: 1.2rem;
+  border: 2px solid black;
+ }
+
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+a {
+  color: black;
+}
+
+/* MAIN */
+.main-img {
+  width: 50% ;
+}
+.second-img {
+  width: 50%;
+}
+.third-img {
+  width: 50%;
+}
