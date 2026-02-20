@@ -1,26 +1,104 @@
 /* HEADER */
- #logo {
-  font-weight: 550 ;
-  font-size: 1.2rem;
-  border: 2px solid black;
- }
 
+body {
+    margin: 0;
+    background-color: #fdf6e3 ;
+}
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #f9e79f;
+}
+
+#logo {
+  font-weight: 550;
+  font-size: 2rem;
+  border: 1px solid #6F4e37;
+  display: inline;
+  color: #6F4E37;
+
+}
 
 ul {
+  display: flex;
+  align-items: center;
   list-style: none;
   padding-left: 0px;
+  margin: 0;
+  gap: 4rem;
+  font-size: 1.2rem;
+  
 }
+
+li {
+  margin-left: 0rem;
+  
+}
+
 a {
-  color: black;
+  color: #6F4E37;
+}
+
+/*RESPINSIVE LAYOUT*/
+@media screen and (max-width: 520px) {
+  header,
+  ul {
+    flex-direction: collum;
+    align-items: start;
+  }
+  ul {
+    margin-top: 0;
+  }
+  li {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
 }
 
 /* MAIN */
-.main-img {
-  width: 50% ;
+
+main {
+    padding: 20px;
 }
-.second-img {
-  width: 50%;
+
+.main-images {
+  display: flex; /* gör att bilderna hamnar bredvid varandra */
 }
-.third-img {
-  width: 50%;
+
+.main-images img {
+  width: 100%;
+  display: block;
+}
+
+/* PRODUCT SECTION */
+
+figure {
+  margin-left: 0;
+}
+
+.products-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+}
+/*RESPONSIVE LAYOUT*/
+@media screen and (min-width: 520px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 750px) {
+  .products-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*FOOTER*/
+footer {
+    padding : 20px;
 }
