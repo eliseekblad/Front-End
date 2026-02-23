@@ -13,6 +13,21 @@ header {
   padding: 20px 40px;
   background-color: #f9e79f;
 }
+/*BARA STRECK UNDER LÄNKAR NÄR MAN HÅLLER MUSEN PÅ*/
+.header a { 
+    text-decoration : none;
+}
+.header a:hover {
+    text-decoration : underline; text-underline-offset: 6px ;
+}
+.products-container a {
+    text-decoration: none;
+    color: #6F4E37;
+}
+.products-container a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
 
 #logo {
   font-weight: 550;
@@ -47,7 +62,7 @@ a {
 @media screen and (max-width: 520px) {
   header,
   ul {
-    flex-direction: collum;
+    flex-direction: column;
     align-items: start;
   }
   ul {
@@ -62,16 +77,61 @@ a {
 /* MAIN */
 
 main {
+    
     padding: 20px;
 }
 
+/* BILDER BREDVID VARANDRA */
 .main-images {
-  display: flex; /* gör att bilderna hamnar bredvid varandra */
+  display: flex; 
 }
 
 .main-images img {
   width: 100%;
   display: block;
+}
+
+/*LATEST COLLECTION MAIN*/
+.latest {
+    margin-top: 60px;
+}
+.latest h2 {
+    margin-bottom: 20px;
+    color: #6F4E37;
+
+}
+.latest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+}
+.latest-grid img{
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+}
+
+/*BESTSELLER MAIN*/
+.bestsellers {
+margin-top: 60px;
+}
+.bestsellers h2{
+    margin-bottom: 20px;
+    color: #6F4E37
+}
+.bestsellers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.bestsellers-grid img{
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+
 }
 
 /* PRODUCT SECTION */
@@ -98,6 +158,31 @@ figure {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/*GLAZING MILK PAGE*/
+.product-layout {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+
+.product-image img {
+    width: 400px;
+    height: auto;
+    display: block;
+}
+
+.product-info {
+    max-width: 400px;
+    color: #6F4E37;
+
+}
+
+
 /*FOOTER*/
 footer {
     padding : 20px;
