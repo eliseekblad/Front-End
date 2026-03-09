@@ -7,7 +7,6 @@ body {
 }
 
 header {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,6 +36,11 @@ main h1 {
   letter-spacing: 1px;
   font-weight: 400;
 }
+.main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 
 /*BARA STRECK UNDER LÄNKAR NÄR MAN HÅLLER MUSEN PÅ*/
@@ -61,40 +65,39 @@ main h1 {
   font-size: 2rem;
   display: inline;
   color: #6f4e37;
+  white-space: nowrap;
 }
 
-ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  padding-left: 0px;
-  margin: 0;
-  gap: 4rem;
-  font-size: 1.2rem;
+.nav-left ul,
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    gap: 4rem;
+    font-size: 1.2rem;
 }
 
-li {
-  margin-left: 0rem;
-}
 
 a {
   color: #6f4e37;
 }
 
-/*RESPINSIVE LAYOUT*/
+/*RESPINSIVE LAYOUT HEADER*/
 @media screen and (max-width: 520px) {
-  header,
-  ul {
-    flex-direction: column;
-    align-items: start;
+  header {
+    padding: 10px 12px;
   }
-  ul {
-    margin-top: 0;
-  }
-  li {
-    margin-left: 0;
-    margin-bottom: 1rem;
-  }
+
+.nav-left ul,
+.nav-right ul {
+    gap: 0.8rem;
+    font-size: 0.9rem;
+}
+#logo {
+    font-size: 1.4rem;
+ }
 }
 
 /* MAIN */
@@ -209,7 +212,7 @@ main {
         color: #8b5e3c;
         margin: 0;
     }
-
+/* RESPONSIVE LAYOUT PRODUCTS SITE*/
     @media screen and (max-width: 900px) {
         .products-container {
             grid-template-columns: repeat(2, 1fr);
@@ -219,6 +222,12 @@ main {
     @media screen and (max-width: 600px) {
         .products-container {
             grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 520px) {
+        .product-card .price {
+            font-size: 0.9rem;
         }
     }
 
@@ -238,10 +247,38 @@ main {
   display: block;
 }
 
-.product-info {
-  max-width: 400px;
+.product-info h1 {
+  font-size: 2.2rem;  
+  max-width: 700px;
+  text-align: left;
   color: #6f4e37;
 }
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #6f4e37;
+    margin: 12px 0 20px;
+    margin-bottom: 20px;
+}
+
+/*ADD TO CART BUTTON*/
+#add-to-cart {
+    margin-top: 20px;
+    padding: 14px 50px;
+    font-size: 1rem;
+    font-weight: 600;
+
+    background-color: #6f4e37;
+    color: white;
+
+    border: none;
+    border-radius: 30px;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
 
 /*CART PAGE*/
 .cart-page h1 {
@@ -263,7 +300,9 @@ main {
   margin-bottom: 32px;
 }
 
-/* Layout */
+
+
+/* CART Layout */
 .cart-layout {
   display: grid;
   grid-template-columns: 1fr 360px;
@@ -343,7 +382,7 @@ main {
   white-space: nowrap;
 }
 
-/* Summary */
+/* CART SUMMARY*/
 .cart-summary {
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 16px;
@@ -396,7 +435,7 @@ main {
   line-height: 1.4;
 }
 
-/* Mobile */
+/* RESPONSIVE LAYOUT CART SITE*/
 @media (max-width: 900px) {
   .cart-layout {
     grid-template-columns: 1fr;
@@ -411,3 +450,102 @@ main {
 footer {
   padding: 20px;
 }
+
+/*RESPONSIVE LAYOUT HOMEPAGE*/
+@media (max-width: 480px) {
+
+    .latest-grid,
+    .bestsellers-grid,
+    .SeenOnYou-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 520px) {
+  .main-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+
+
+.heading1 p {
+  font-size: 0.95rem;
+  text-align: center;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  max-width: 260px;
+}
+
+
+}
+
+
+
+/*HEADER*/
+
+@media (max-width: 520px) {
+
+  .latest h2,
+  .bestsellers h2,
+  .SeenOnYou h2 {
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+
+}
+
+/*RESPONSIVE LAYOUT GLAZING MILK PAGE*/
+@media (max-width: 768px) {
+    .product-layout {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
+    align-items: center;
+    }
+
+    .product-image img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .product-info {
+        width: 100%;
+        max-width: 400px;
+        text-align: left;
+    }
+
+    .product-info h1 {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+
+    #add-to-cart {
+        width: 100%;
+        max-width: 280px;
+     }
+    }
+    @media (max-width: 480px) {
+        .product-layout {
+            padding: 20px 16px;
+            gap: 24px;
+        }
+
+        .product-info h1 {
+            font-size: 1.8rem;
+        }
+
+        .product-info p {
+            font-size: 1rem;
+        }
+
+        .price {
+            font-size: 1.8rem;
+        }
+
+        #add-to-cart {
+            width: 100%;
+            max-width: none;
+            padding:14px 20px;
+        }
+    }
