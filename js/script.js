@@ -4,7 +4,7 @@
 const button = document.getElementById("add-to-cart");
 
 if (button) {
-button.addEventListener("click", () => {
+button.addEventListener("click", function() {
     const product = {
         id: button.dataset.id,
         name: button.dataset.name,
@@ -16,7 +16,7 @@ button.addEventListener("click", () => {
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-const existingProduct = cart.find(item => item.id === product.id);
+const existingProduct = cart.find(item => item.id === product.id); //
 
 if (existingProduct) {
     existingProduct.quantity += 1;
@@ -50,7 +50,7 @@ if (cartContainer) {
         article.classList.add("cart-item");
 
         article.innerHTML =`
-        <img src="${item.image}" alt="${item.name}" class="cart-img">
+        <img src="${item.image}" alt="${item.name}" class="cart-img"> 
 
             <div class="cart-info">
                 <p class= "cart-name">${item.name}</p>
@@ -66,7 +66,7 @@ if (cartContainer) {
 
                     cartContainer.appendChild(article);
     });
-    
+    // 
 
     //REMOVE PRODUCT//
 
@@ -80,11 +80,11 @@ if (cartContainer) {
     const removeButtons = document.querySelectorAll(".remove");
 
     removeButtons.forEach(button =>{
-        button.addEventListener("click", () => {
+        button.addEventListener("click", function() {
             const productId = button.dataset.id ;
 
             let cart = JSON.parse(localStorage.getItem("cart")) || [] ;
-            cart = cart.filter(item => item.id !== productId) ;
+            cart = cart.filter(item => item.id !== productId) ; //
 
             localStorage.setItem("cart", JSON.stringify(cart));
             location.reload();
