@@ -1,10 +1,12 @@
-/* HEADER */
+/* OVERALL STYLE */
 
 body {
   margin: 0;
   background-color: #fdf6e3;
   font-family: Arial, sans-serif;
 }
+
+/*HEADER*/
 
 header {
   display: flex;
@@ -23,12 +25,12 @@ main h1 {
 }
 
 
-/*P ON MAIN SITE*/
+/*HOME PAGE INTRO TEXT*/
 .heading1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 30px;
+  margin: 0;
 }
 .heading1 p {
   font-size: 1.1rem;
@@ -36,6 +38,8 @@ main h1 {
   letter-spacing: 1px;
   font-weight: 400;
 }
+
+/*HERO IMAGE*/
 .main-img {
   width: 100%;
   height: auto;
@@ -43,7 +47,7 @@ main h1 {
 }
 
 
-/*BARA STRECK UNDER LÄNKAR NÄR MAN HÅLLER MUSEN PÅ*/
+/* JUST LINES UNDER LINKS WHEN THE MOUSE IS ON*/
 .header a {
   text-decoration: none;
 }
@@ -60,6 +64,7 @@ main h1 {
   text-underline-offset: 6px;
 }
 
+/*LOGO*/
 #logo {
   font-weight: 550;
   font-size: 2rem;
@@ -78,7 +83,6 @@ main h1 {
     gap: 4rem;
     font-size: 1.2rem;
 }
-
 
 a {
   color: #6f4e37;
@@ -103,10 +107,10 @@ a {
 /* MAIN */
 
 main {
-  padding: 20px;
+  padding: 20px 0;
 }
 
-/* PICTURES NEXT TO EACH OTHER*/
+/* PICTURES NEXT TO EACH OTHER- MAIN*/
 .main-images {
   display: flex;
 }
@@ -231,7 +235,7 @@ main {
         }
     }
 
-/*GLAZING MILK PAGE*/
+/*GLAZING MILK DETAIL PAGE*/
 .product-layout {
   display: flex;
   gap: 60px;
@@ -272,6 +276,7 @@ main {
     background-color: #6f4e37;
     color: white;
 
+/* 279-284 was apapted from chatgpt */
     border: none;
     border-radius: 30px;
 
@@ -310,7 +315,7 @@ main {
   align-items: start;
 }
 
-/* Items */
+/* CART Items*/ /* "Border top and button" was adapted from Chatgpt*/
 .cart-items {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -328,7 +333,6 @@ main {
   height: 88px;
   object-fit: cover;
   border-radius: 12px;
-  background: #f3f3f3;
 }
 
 .cart-name {
@@ -338,7 +342,6 @@ main {
 
 .cart-meta {
   margin: 6px 0 0;
-  opacity: 0.7;
   font-size: 14px;
 }
 
@@ -354,7 +357,6 @@ main {
   gap: 8px;
   align-items: center;
   font-size: 14px;
-  opacity: 0.85;
 }
 
 .qty select {
@@ -367,14 +369,9 @@ main {
 .remove {
   background: transparent;
   border: none;
-  cursor: pointer;
   text-decoration: underline;
-  opacity: 0.7;
 }
 
-.remove:hover {
-  opacity: 1;
-}
 
 .cart-price {
   margin: 0;
@@ -402,7 +399,6 @@ main {
   justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  opacity: 0.9;
 }
 
 .sum-total {
@@ -418,15 +414,11 @@ main {
   padding: 12px 14px;
   border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background: #111;
+  background: #6f4e37;
   color: #fff;
-  cursor: pointer;
   font-weight: 600;
 }
 
-.checkout:hover {
-  opacity: 0.92;
-}
 
 .fineprint {
   margin: 12px 0 0;
@@ -435,7 +427,7 @@ main {
   line-height: 1.4;
 }
 
-/* RESPONSIVE LAYOUT CART SITE*/
+/* RESPONSIVE LAYOUT CART PAGE*/
 @media (max-width: 900px) {
   .cart-layout {
     grid-template-columns: 1fr;
@@ -481,7 +473,7 @@ footer {
 
 
 
-/*HEADER*/
+/* RESONSIVE LAYOUT HOMEPAGE HEADINGS*/
 
 @media (max-width: 520px) {
 
@@ -494,7 +486,7 @@ footer {
 
 }
 
-/*RESPONSIVE LAYOUT GLAZING MILK PAGE*/
+/*RESPONSIVE LAYOUT GLAZING MILK DETAIL PAGE*/
 @media (max-width: 768px) {
     .product-layout {
     flex-direction: column;

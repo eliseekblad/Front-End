@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/script.js" defer></script>
 </head>
+
 <body>
+    <!--HEADER WITH NAVIGATION AND LOGO-->
        <header class="header">
   <nav class="nav-left">
     <ul>
@@ -26,16 +28,19 @@
   </nav>
 </header>
 
+<!--MAIN CONTENT CART PAGE-->
   <main class="cart-page">
     <h1>Shopping cart</h1>
 
      <section class="cart-layout">
-  
+
+  <!--PRODUCTS ADDED TO CART-->
     <div class="cart-items" id="cart-items"></div>
 
     <aside class="cart-summary">
     <h2>Summary</h2>
 
+    <!--SUBTOTAL SECTION-->
       <div class="sum-row">
         <span>Subtotal</span>
         <span id="subtotal"> 0 kr</span>
@@ -51,6 +56,7 @@
         <span id="total">0 kr</span>
       </div>
 
+      <!--CHECHOUT BUTTON-->
       <button class="checkout" type="button">Go to checkout</button>
       </aside>
 
